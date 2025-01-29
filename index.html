@@ -5,49 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interactive Web Page</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 20px;
-            background-color: aliceblue;
-        }
-        .animate-header {
-            animation: fadeIn 2s ease-in-out;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        #animateButton{
-            color: white;
-            background-color: brown;
-            padding: 5px;
-            border: 2px solid black;
-            border-radius: 10px;
-
-        }
-        #animatedBox {
-            width: 100px;
-            height: 100px;
-            background-color: blue;
-            margin: 20px auto;
-            transition: transform 0.5s;
-            border-radius: 5px;
-            box-shadow:10px 30px 20px rgba(0, 0, 0, 0.1);
-        
-        }
-        .enlarged {
-            transform: scale(1.5);
-        }
-        .container{
-            margin-top: 80px;
-        }
-        input{
-            width: 60px;
-            height: 20px;
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -64,19 +21,5 @@
         <button onclick="calculateArea()">Calculate Area</button>
         <p id="result"></p>
     </div>
-
-    <script>
-        function calculateArea() {
-            let width = document.getElementById("width").value;
-            let height = document.getElementById("height").value;
-            let area = width * height;
-            document.getElementById("result").innerText = "Area: " + area;
-        }
-
-        document.getElementById("animateButton").addEventListener("click", function() {
-            let box = document.getElementById("animatedBox");
-            box.classList.toggle("enlarged");
-        });
-    </script>
 </body>
 </html>
